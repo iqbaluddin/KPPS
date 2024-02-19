@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* body{
+    display: flex;
+    justify-content: center;
+} */
+
+header{
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 100%;
+    padding: 20px 76px;
+    /* background: #fff; */
+    z-index: 9999;  
+}
+
+header .logo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+header .logo img{
+    width: 25px;
+}
+
+header .logo h1{
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #093B3B;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+}
+
+nav ul li{
+    list-style: none;
+}
+
+nav ul li a{
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #093B3B;
+}
+
+nav ul li a:hover{
+    text-decoration: underline;
+}
+
+.boxToggle{
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    header{        
+        padding: 20px 24px;
+    }
+
+    nav{
+        position: absolute;
+        top: 0;
+        right: 0;
+        overflow: hidden;
+        width: 0;
+        height: 100vh;
+        background: #093B3B;
+        display: flex;
+        justify-content: center;
+        transition: .5s;
+    }
+
+    .navActive{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 160px;
+        height: 100vh;
+        background: #093B3B;
+        display: flex;
+        justify-content: center;
+    }
+
+    .navActive .ulActive{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .navActive .ulActive li a{
+        color: #fff;
+    }
+
+    .boxToggle{
+        position: relative;
+        display: flex;
+        align-items: center;        
+        width: 25px;
+        height: 25px;        
+    }
+
+    .toggle2{
+        display: flex;
+        width: 25px;
+        height: 3px;
+        background: #093B3B;
+        transition: .5s;
+    }
+
+    .toggle1{
+        content: '';
+        position: absolute;
+        top: 3px;
+        width: 100%;
+        height: 3px;
+        background: #093B3B;
+        transform: rotate(0);
+        transition: .5s;
+    }
+
+    .toggle3{
+        content: '';
+        position: absolute;
+        bottom: 3px;
+        width: 25px;
+        height: 3px;
+        background: #093B3B;
+        transform: rotate(0);
+        transition: .5s;
+    }
+
+    .activeToggle .toggle2{  
+       transform: scale(0);
+       background: #fff;
+    }
+    
+    .activeToggle .toggle1{
+        top: 50%;
+        transform: rotate(45deg);
+        background: #fff;
+    }
+
+    .activeToggle .toggle3{
+        bottom: 40%;
+        transform: rotate(-45deg);
+        background: #fff;
+    }
+
+}
+
+main{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;    
+}
+
+article{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;    
+    padding: 0 76px;
+    background: #E8F6F3;
+}
+
+.benner{
+    position: relative;
+    width: 100%;
+    height: 320px;
+    border-radius: 12px;    
+    margin-top: 50px;
+    overflow: hidden;
+}
+
+.imgBenner{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.titleBenner{
+    position: absolute;    
+    height: 72px;
+    background: #093B3B;
+    border-radius: 6px;
+    bottom: -36px;
+}
+
+.titleBenner h1{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 40px;
+    letter-spacing: 2px;
+    line-height: 72px;
+    margin: 0 30px;
+    color: #fff;
+}
+
+@media only screen and (max-width: 600px){
+    article{
+        height: 300px;
+        padding: 0 24px;
+    }
+    .benner{
+        height: 150px;
+    }
+
+    .titleBenner{
+        position: absolute;    
+        height: 36px;
+        background: #093B3B;
+        border-radius: 6px;
+        bottom: -18px;
+    }
+
+    .titleBenner h1{
+        font-size: 16px;
+        line-height: 36px;
+        margin: 0 12px;
+    }
+}
+
+.contentVdanM{
+    position: relative;
+    padding: 72px;
+    min-height: 400px;    
+}
+
+.contentVdanM h1{
+    font-size: 32px;
+    font-weight: 800;
+    color: #093B3B;
+    text-align: center;
+}
+
+.contentVdanM .textContent{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contentVdanM .textContent h4{
+    position: relative;
+    font-size: 24px;
+    color: #093B3B;
+}
+
+.contentVdanM .textContent h4::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 2px;
+    background: #093B3B;
+}
+
+.contentVdanM .textContent p{
+    font-size: 16px;
+    text-align: justify;
+}
+
+@media only screen and (max-width: 600px){
+    .contentVdanM{
+        padding: 32px 24px;
+    }
+}
+
+.galeri{
+    position: relative;
+    padding: 40px;
+    background: #E8F6F3;
+}
+
+.galeri h1{
+    font-size: 32px;
+    font-weight: 800;
+    color: #093B3B;
+    text-align: center;
+}
+
+.boxStrSatu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    gap: 28px;
+}
+
+.boxStrSatu .card{
+    position: relative;
+    display: flex;    
+    flex-direction: column;
+    align-items: center;
+    width: 280px;
+    height: 180px;    
+    background: #093B3B;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.boxStrSatu .card .gmr{
+    position: relative;
+    width: 280px;
+    height: 150px;
+    overflow: hidden;
+}
+
+.boxStrSatu .card .gmr img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;    
+    object-fit: cover;
+}
+
+.boxStrSatu .card h6{
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    
+}
+/* copyright */
+.copyright
+{
+    text-align: center;
+    background: #020617;
+    height: 45px;
+}
+.copyright a
+{
+    color: #fff;
+    line-height: 45px;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 600px){
+    .galeri{
+        padding: 20px;
+    }
+}
