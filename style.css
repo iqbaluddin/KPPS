@@ -315,6 +315,7 @@ article{
     height: 180px;    
     background: #093B3B;
     border-radius: 6px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, .3);
     overflow: hidden;
 }
 
